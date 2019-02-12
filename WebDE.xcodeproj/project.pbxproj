@@ -7,11 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F69610B7221320860082764D /* Email.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F69610A522130E2C0082764D /* Email.framework */; };
-		F6C93B832211690C004A6737 /* UserManagement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6C93B7E221168FA004A6737 /* UserManagement.framework */; };
-		F6C93B8422116910004A6737 /* Payment.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6C93B74221168EE004A6737 /* Payment.framework */; };
 		F6C93B9722118379004A6737 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C93B9622118379004A6737 /* Networking.swift */; };
-		F6C93BA222118871004A6737 /* Networking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6C93B9F22118861004A6737 /* Networking.framework */; };
 		F6DB7008220D7BD10076B6B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6DB7007220D7BD10076B6B2 /* AppDelegate.swift */; };
 		F6DB700F220D7BD30076B6B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6DB700E220D7BD30076B6B2 /* Assets.xcassets */; };
 		F6DB7012220D7BD30076B6B2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6DB7010220D7BD30076B6B2 /* LaunchScreen.storyboard */; };
@@ -20,61 +16,61 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		F69610A422130E2C0082764D /* PBXContainerItemProxy */ = {
+		F69610C722132D2E0082764D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = F696109E22130E2C0082764D /* Email.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = F66EB40C2211CCD000D177C5;
-			remoteInfo = Email;
-		};
-		F69610A622130E2C0082764D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F696109E22130E2C0082764D /* Email.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = F66EB4152211CCD000D177C5;
-			remoteInfo = EmailTests;
-		};
-		F6C93B73221168EE004A6737 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F6C93B6D221168EE004A6737 /* Payment.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = F6DB6FB7220C8CA30076B6B2;
-			remoteInfo = Payment;
-		};
-		F6C93B75221168EE004A6737 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F6C93B6D221168EE004A6737 /* Payment.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = F6DB6FC0220C8CA30076B6B2;
-			remoteInfo = PaymentTests;
-		};
-		F6C93B7D221168FA004A6737 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F6C93B77221168FA004A6737 /* UserManagement.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = F6DB6F84220C8BEF0076B6B2;
-			remoteInfo = UserManagement;
-		};
-		F6C93B7F221168FA004A6737 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F6C93B77221168FA004A6737 /* UserManagement.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = F6DB6F8D220C8BEF0076B6B2;
-			remoteInfo = UserManagementTests;
-		};
-		F6C93B9E22118861004A6737 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F6C93B9922118861004A6737 /* Networking.xcodeproj */;
+			containerPortal = F69610C222132D2E0082764D /* Networking.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = F6C93AA8220D9506004A6737;
 			remoteInfo = Networking;
 		};
-		F6C93BA022118861004A6737 /* PBXContainerItemProxy */ = {
+		F69610C922132D2E0082764D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = F6C93B9922118861004A6737 /* Networking.xcodeproj */;
+			containerPortal = F69610C222132D2E0082764D /* Networking.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = F6C93AB1220D9506004A6737;
 			remoteInfo = NetworkingTests;
+		};
+		F69610D122132D3F0082764D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F69610CB22132D3F0082764D /* Email.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F66EB40C2211CCD000D177C5;
+			remoteInfo = Email;
+		};
+		F69610D322132D3F0082764D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F69610CB22132D3F0082764D /* Email.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F66EB4152211CCD000D177C5;
+			remoteInfo = EmailTests;
+		};
+		F69610DB22132D4B0082764D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F69610D522132D4A0082764D /* UserManagement.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F6DB6F84220C8BEF0076B6B2;
+			remoteInfo = UserManagement;
+		};
+		F69610DD22132D4B0082764D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F69610D522132D4A0082764D /* UserManagement.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F6DB6F8D220C8BEF0076B6B2;
+			remoteInfo = UserManagementTests;
+		};
+		F69610E522132D5A0082764D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F69610DF22132D5A0082764D /* Payment.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F6DB6FB7220C8CA30076B6B2;
+			remoteInfo = Payment;
+		};
+		F69610E722132D5A0082764D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F69610DF22132D5A0082764D /* Payment.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F6DB6FC0220C8CA30076B6B2;
+			remoteInfo = PaymentTests;
 		};
 		F6DB7019220D7BD30076B6B2 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -106,12 +102,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		F696109E22130E2C0082764D /* Email.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Email.xcodeproj; path = ../../Email/Email.xcodeproj; sourceTree = "<group>"; };
-		F6C93B6D221168EE004A6737 /* Payment.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Payment.xcodeproj; path = ../../Payment/Payment.xcodeproj; sourceTree = "<group>"; };
-		F6C93B77221168FA004A6737 /* UserManagement.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = UserManagement.xcodeproj; path = ../../UserManagement/UserManagement.xcodeproj; sourceTree = "<group>"; };
+		F69610C222132D2E0082764D /* Networking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Networking.xcodeproj; path = ../../MOANetworking/Networking.xcodeproj; sourceTree = "<group>"; };
+		F69610CB22132D3F0082764D /* Email.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Email.xcodeproj; path = ../../MOAEmail/Email.xcodeproj; sourceTree = "<group>"; };
+		F69610D522132D4A0082764D /* UserManagement.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = UserManagement.xcodeproj; path = ../../MOAUserManagement/UserManagement.xcodeproj; sourceTree = "<group>"; };
+		F69610DF22132D5A0082764D /* Payment.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Payment.xcodeproj; path = ../../MOAPayment/Payment.xcodeproj; sourceTree = "<group>"; };
 		F6C93B872211693E004A6737 /* Networking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Networking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6C93B9622118379004A6737 /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
-		F6C93B9922118861004A6737 /* Networking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Networking.xcodeproj; path = ../../Networking/Networking.xcodeproj; sourceTree = "<group>"; };
 		F6DB7004220D7BD10076B6B2 /* WebDE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WebDE.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6DB7007220D7BD10076B6B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F6DB700E220D7BD30076B6B2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -130,10 +126,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F69610B7221320860082764D /* Email.framework in Frameworks */,
-				F6C93BA222118871004A6737 /* Networking.framework in Frameworks */,
-				F6C93B8422116910004A6737 /* Payment.framework in Frameworks */,
-				F6C93B832211690C004A6737 /* UserManagement.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -154,11 +146,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		F696109F22130E2C0082764D /* Products */ = {
+		F69610C322132D2E0082764D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F69610A522130E2C0082764D /* Email.framework */,
-				F69610A722130E2C0082764D /* EmailTests.xctest */,
+				F69610C822132D2E0082764D /* Networking.framework */,
+				F69610CA22132D2E0082764D /* NetworkingTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F69610CC22132D3F0082764D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F69610D222132D3F0082764D /* Email.framework */,
+				F69610D422132D3F0082764D /* EmailTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F69610D622132D4A0082764D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F69610DC22132D4B0082764D /* UserManagement.framework */,
+				F69610DE22132D4B0082764D /* UserManagementTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F69610E022132D5A0082764D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F69610E622132D5A0082764D /* Payment.framework */,
+				F69610E822132D5A0082764D /* PaymentTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -166,47 +185,20 @@
 		F6C93B6C221168DF004A6737 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				F696109E22130E2C0082764D /* Email.xcodeproj */,
-				F6C93B77221168FA004A6737 /* UserManagement.xcodeproj */,
-				F6C93B6D221168EE004A6737 /* Payment.xcodeproj */,
+				F69610DF22132D5A0082764D /* Payment.xcodeproj */,
+				F69610D522132D4A0082764D /* UserManagement.xcodeproj */,
+				F69610CB22132D3F0082764D /* Email.xcodeproj */,
 			);
 			path = Modules;
-			sourceTree = "<group>";
-		};
-		F6C93B6E221168EE004A6737 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				F6C93B74221168EE004A6737 /* Payment.framework */,
-				F6C93B76221168EE004A6737 /* PaymentTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		F6C93B78221168FA004A6737 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				F6C93B7E221168FA004A6737 /* UserManagement.framework */,
-				F6C93B80221168FA004A6737 /* UserManagementTests.xctest */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		F6C93B9822118849004A6737 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				F69610C222132D2E0082764D /* Networking.xcodeproj */,
 				F6C93B9622118379004A6737 /* Networking.swift */,
-				F6C93B9922118861004A6737 /* Networking.xcodeproj */,
 			);
 			path = Networking;
-			sourceTree = "<group>";
-		};
-		F6C93B9A22118861004A6737 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				F6C93B9F22118861004A6737 /* Networking.framework */,
-				F6C93BA122118861004A6737 /* NetworkingTests.xctest */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		F6DB6FFB220D7BD10076B6B2 = {
@@ -362,20 +354,20 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = F696109F22130E2C0082764D /* Products */;
-					ProjectRef = F696109E22130E2C0082764D /* Email.xcodeproj */;
+					ProductGroup = F69610CC22132D3F0082764D /* Products */;
+					ProjectRef = F69610CB22132D3F0082764D /* Email.xcodeproj */;
 				},
 				{
-					ProductGroup = F6C93B9A22118861004A6737 /* Products */;
-					ProjectRef = F6C93B9922118861004A6737 /* Networking.xcodeproj */;
+					ProductGroup = F69610C322132D2E0082764D /* Products */;
+					ProjectRef = F69610C222132D2E0082764D /* Networking.xcodeproj */;
 				},
 				{
-					ProductGroup = F6C93B6E221168EE004A6737 /* Products */;
-					ProjectRef = F6C93B6D221168EE004A6737 /* Payment.xcodeproj */;
+					ProductGroup = F69610E022132D5A0082764D /* Products */;
+					ProjectRef = F69610DF22132D5A0082764D /* Payment.xcodeproj */;
 				},
 				{
-					ProductGroup = F6C93B78221168FA004A6737 /* Products */;
-					ProjectRef = F6C93B77221168FA004A6737 /* UserManagement.xcodeproj */;
+					ProductGroup = F69610D622132D4A0082764D /* Products */;
+					ProjectRef = F69610D522132D4A0082764D /* UserManagement.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -388,60 +380,60 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		F69610A522130E2C0082764D /* Email.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Email.framework;
-			remoteRef = F69610A422130E2C0082764D /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		F69610A722130E2C0082764D /* EmailTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = EmailTests.xctest;
-			remoteRef = F69610A622130E2C0082764D /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		F6C93B74221168EE004A6737 /* Payment.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Payment.framework;
-			remoteRef = F6C93B73221168EE004A6737 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		F6C93B76221168EE004A6737 /* PaymentTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = PaymentTests.xctest;
-			remoteRef = F6C93B75221168EE004A6737 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		F6C93B7E221168FA004A6737 /* UserManagement.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = UserManagement.framework;
-			remoteRef = F6C93B7D221168FA004A6737 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		F6C93B80221168FA004A6737 /* UserManagementTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = UserManagementTests.xctest;
-			remoteRef = F6C93B7F221168FA004A6737 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		F6C93B9F22118861004A6737 /* Networking.framework */ = {
+		F69610C822132D2E0082764D /* Networking.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = Networking.framework;
-			remoteRef = F6C93B9E22118861004A6737 /* PBXContainerItemProxy */;
+			remoteRef = F69610C722132D2E0082764D /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		F6C93BA122118861004A6737 /* NetworkingTests.xctest */ = {
+		F69610CA22132D2E0082764D /* NetworkingTests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = NetworkingTests.xctest;
-			remoteRef = F6C93BA022118861004A6737 /* PBXContainerItemProxy */;
+			remoteRef = F69610C922132D2E0082764D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F69610D222132D3F0082764D /* Email.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Email.framework;
+			remoteRef = F69610D122132D3F0082764D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F69610D422132D3F0082764D /* EmailTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = EmailTests.xctest;
+			remoteRef = F69610D322132D3F0082764D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F69610DC22132D4B0082764D /* UserManagement.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = UserManagement.framework;
+			remoteRef = F69610DB22132D4B0082764D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F69610DE22132D4B0082764D /* UserManagementTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = UserManagementTests.xctest;
+			remoteRef = F69610DD22132D4B0082764D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F69610E622132D5A0082764D /* Payment.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Payment.framework;
+			remoteRef = F69610E522132D5A0082764D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F69610E822132D5A0082764D /* PaymentTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = PaymentTests.xctest;
+			remoteRef = F69610E722132D5A0082764D /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
