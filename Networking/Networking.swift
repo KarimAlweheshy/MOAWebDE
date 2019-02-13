@@ -48,9 +48,7 @@ final class Networking: NetworkingType {
         }
         
         let completionBlock = { (module: ModuleType, result: Result<T>) in
-            self.inMemoryModule.removeAll {
-                $0 === module
-            }
+            self.inMemoryModule.removeAll { $0 === module }
             completionHandler(result)
         }
         
@@ -75,7 +73,7 @@ final class Networking: NetworkingType {
                                      completionHandler: { completionBlock(module, $0) })
                     }
                     switch error.errorCode {
-                    case 401: self.handleForbidden(completionHandler: retryBlock)
+                    case 401: self.handleUnauthorized(completionHandler: retryBlock)
                     case 403: self.handleForbidden(completionHandler: retryBlock)
                     default: completionBlock(module, result)
                     }
@@ -103,7 +101,8 @@ final class Networking: NetworkingType {
 
             //Authorize and re-login
             if let urlResponse = urlResponse as? HTTPURLResponse {
-                if (200...300).contains(urlResponse.statusCode) {
+                switch urlResponse.statusCode {
+                case 200...300:
                     guard let data = data,
                         let contentType = urlResponse.allHeaderFields["Content-Type"] as? String,
                         contentType == "application/json" else {
@@ -114,27 +113,24 @@ final class Networking: NetworkingType {
                     } catch let parsingError {
                         apiError = parsingError
                     }
-                } else if 401 == urlResponse.statusCode {
-                    self.handleUnauthorized { success in
-                        if success {
+                case 401, 403:
+                    let retryBlock = { (canRetry: Bool, responseError: ResponseError) in
+                        DispatchQueue.main.async {
+                            guard canRetry else {
+                                completionHandler(.error(responseError))
+                                return
+                            }
                             self.execute(request: request, completionHandler: completionHandler)
-                        } else {
-                            completionHandler(.error(ResponseError.unauthorized401(error: nil)))
                         }
                     }
-                    return
-                } else if 403 == urlResponse.statusCode {
-                    self.handleForbidden { success in
-                        if success {
-                            self.execute(request: request, completionHandler: completionHandler)
-                        } else {
-                            completionHandler(.error(ResponseError.forbidden403(error: nil)))
-                        }
+                    if urlResponse.statusCode == 401 {
+                        self.handleUnauthorized { retryBlock($0, .unauthorized401(error: nil))}
+                        return
+                    } else if urlResponse.statusCode == 403 {
+                        self.handleForbidden { retryBlock($0, .forbidden403(error: nil))}
+                        return
                     }
-                } else if let parsedError = ResponseError(error: error, response: urlResponse) {
-                    apiError = parsedError
-                } else {
-                    apiError = ResponseError.serverError500(error: nil)
+                default: apiError = error
                 }
             }
         
