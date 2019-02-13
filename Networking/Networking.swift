@@ -82,8 +82,8 @@ final class Networking: NetworkingType {
         }
     }
     
-    public func execute<T>(request: RemoteRequest,
-                           completionHandler: @escaping (Result<T>) -> Void) where T : Decodable, T : Encodable {
+    public func execute<T: Codable>(request: RemoteRequest,
+                                    completionHandler: @escaping (Result<T>) -> Void) {
         if !isAuthorized {
             self.handleUnauthorized { success in
                 if success {
@@ -140,7 +140,7 @@ final class Networking: NetworkingType {
                     completionHandler(.success(apiResult))
                     return
                 }
-                completionHandler(.error(apiError ?? ResponseError.other))
+                completionHandler(.error(apiError ?? error ?? ResponseError.other))
             }
         }.resume()
     }

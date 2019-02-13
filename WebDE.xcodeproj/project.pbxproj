@@ -9,16 +9,18 @@
 /* Begin PBXBuildFile section */
 		F66DABA522140040005DD98F /* Networking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F69610C822132D2E0082764D /* Networking.framework */; };
 		F66DABA622140040005DD98F /* Networking.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F69610C822132D2E0082764D /* Networking.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		F66DABA9221400FC005DD98F /* Payment.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F69610E622132D5A0082764D /* Payment.framework */; };
-		F66DABAA221400FC005DD98F /* Payment.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F69610E622132D5A0082764D /* Payment.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		F66DABAD221400FC005DD98F /* UserManagement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F69610DC22132D4B0082764D /* UserManagement.framework */; };
-		F66DABAE221400FC005DD98F /* UserManagement.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F69610DC22132D4B0082764D /* UserManagement.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		F6848A5622142F9400DD1EEA /* EmailDetails.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6848A5322142F5B00DD1EEA /* EmailDetails.framework */; };
-		F6848A5722142F9400DD1EEA /* EmailDetails.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F6848A5322142F5B00DD1EEA /* EmailDetails.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		F6848A5A22142F9400DD1EEA /* EmailForm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6848A4922142F5100DD1EEA /* EmailForm.framework */; };
-		F6848A5B22142F9400DD1EEA /* EmailForm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F6848A4922142F5100DD1EEA /* EmailForm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		F6848A5E22142F9400DD1EEA /* EmailList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6848A3F22142F4900DD1EEA /* EmailList.framework */; };
-		F6848A5F22142F9400DD1EEA /* EmailList.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F6848A3F22142F4900DD1EEA /* EmailList.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F6848B4C2214637D00DD1EEA /* EmailSync.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6848B492214635B00DD1EEA /* EmailSync.framework */; };
+		F6848B4D2214637D00DD1EEA /* EmailSync.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F6848B492214635B00DD1EEA /* EmailSync.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F6848B502214637D00DD1EEA /* EmailDetails.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6848AF52214630A00DD1EEA /* EmailDetails.framework */; };
+		F6848B512214637D00DD1EEA /* EmailDetails.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F6848AF52214630A00DD1EEA /* EmailDetails.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F6848B542214637D00DD1EEA /* EmailForm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6848B072214630A00DD1EEA /* EmailForm.framework */; };
+		F6848B552214637D00DD1EEA /* EmailForm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F6848B072214630A00DD1EEA /* EmailForm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F6848B582214637D00DD1EEA /* EmailList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6848AFE2214630A00DD1EEA /* EmailList.framework */; };
+		F6848B592214637D00DD1EEA /* EmailList.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F6848AFE2214630A00DD1EEA /* EmailList.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F6848B5C2214637D00DD1EEA /* Payment.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6848AEC2214630A00DD1EEA /* Payment.framework */; };
+		F6848B5D2214637D00DD1EEA /* Payment.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F6848AEC2214630A00DD1EEA /* Payment.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F6848B602214637D00DD1EEA /* UserManagement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6848B102214630A00DD1EEA /* UserManagement.framework */; };
+		F6848B612214637D00DD1EEA /* UserManagement.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F6848B102214630A00DD1EEA /* UserManagement.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F6C93B9722118379004A6737 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C93B9622118379004A6737 /* Networking.swift */; };
 		F6DB7008220D7BD10076B6B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6DB7007220D7BD10076B6B2 /* AppDelegate.swift */; };
 		F6DB700F220D7BD30076B6B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6DB700E220D7BD30076B6B2 /* Assets.xcassets */; };
@@ -35,82 +37,131 @@
 			remoteGlobalIDString = F6C93AA7220D9506004A6737;
 			remoteInfo = Networking;
 		};
-		F66DABAB221400FC005DD98F /* PBXContainerItemProxy */ = {
+		F6848AEB2214630A00DD1EEA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = F69610DF22132D5A0082764D /* Payment.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = F6DB6FB6220C8CA30076B6B2;
+			containerPortal = F6848AE62214630A00DD1EEA /* Payment.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F6DB6FB7220C8CA30076B6B2;
 			remoteInfo = Payment;
 		};
-		F66DABAF221400FC005DD98F /* PBXContainerItemProxy */ = {
+		F6848AED2214630A00DD1EEA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = F69610D522132D4A0082764D /* UserManagement.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = F6DB6F83220C8BEF0076B6B2;
-			remoteInfo = UserManagement;
-		};
-		F6848A3E22142F4900DD1EEA /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F6848A3822142F4900DD1EEA /* EmailList.xcodeproj */;
+			containerPortal = F6848AE62214630A00DD1EEA /* Payment.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = F66EB40C2211CCD000D177C5;
-			remoteInfo = EmailList;
+			remoteGlobalIDString = F6DB6FC0220C8CA30076B6B2;
+			remoteInfo = PaymentTests;
 		};
-		F6848A4022142F4900DD1EEA /* PBXContainerItemProxy */ = {
+		F6848AF42214630A00DD1EEA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = F6848A3822142F4900DD1EEA /* EmailList.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = F66EB4152211CCD000D177C5;
-			remoteInfo = EmailListTests;
-		};
-		F6848A4822142F5100DD1EEA /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F6848A4222142F5100DD1EEA /* EmailForm.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = F66EB40C2211CCD000D177C5;
-			remoteInfo = EmailForm;
-		};
-		F6848A4A22142F5100DD1EEA /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F6848A4222142F5100DD1EEA /* EmailForm.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = F66EB4152211CCD000D177C5;
-			remoteInfo = EmailFormTests;
-		};
-		F6848A5222142F5B00DD1EEA /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F6848A4C22142F5B00DD1EEA /* EmailDetails.xcodeproj */;
+			containerPortal = F6848AEF2214630A00DD1EEA /* EmailDetails.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = F66EB40C2211CCD000D177C5;
 			remoteInfo = EmailDetails;
 		};
-		F6848A5422142F5B00DD1EEA /* PBXContainerItemProxy */ = {
+		F6848AF62214630A00DD1EEA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = F6848A4C22142F5B00DD1EEA /* EmailDetails.xcodeproj */;
+			containerPortal = F6848AEF2214630A00DD1EEA /* EmailDetails.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = F66EB4152211CCD000D177C5;
 			remoteInfo = EmailDetailsTests;
 		};
-		F6848A5822142F9400DD1EEA /* PBXContainerItemProxy */ = {
+		F6848AFD2214630A00DD1EEA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = F6848A4C22142F5B00DD1EEA /* EmailDetails.xcodeproj */;
+			containerPortal = F6848AF82214630A00DD1EEA /* EmailList.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F66EB40C2211CCD000D177C5;
+			remoteInfo = EmailList;
+		};
+		F6848AFF2214630A00DD1EEA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F6848AF82214630A00DD1EEA /* EmailList.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F66EB4152211CCD000D177C5;
+			remoteInfo = EmailListTests;
+		};
+		F6848B062214630A00DD1EEA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F6848B012214630A00DD1EEA /* EmailForm.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F66EB40C2211CCD000D177C5;
+			remoteInfo = EmailForm;
+		};
+		F6848B082214630A00DD1EEA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F6848B012214630A00DD1EEA /* EmailForm.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F66EB4152211CCD000D177C5;
+			remoteInfo = EmailFormTests;
+		};
+		F6848B0F2214630A00DD1EEA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F6848B0A2214630A00DD1EEA /* UserManagement.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F6DB6F84220C8BEF0076B6B2;
+			remoteInfo = UserManagement;
+		};
+		F6848B112214630A00DD1EEA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F6848B0A2214630A00DD1EEA /* UserManagement.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F6DB6F8D220C8BEF0076B6B2;
+			remoteInfo = UserManagementTests;
+		};
+		F6848B482214635B00DD1EEA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F6848B422214635B00DD1EEA /* EmailSync.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F6848A722214460400DD1EEA;
+			remoteInfo = EmailSync;
+		};
+		F6848B4A2214635B00DD1EEA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F6848B422214635B00DD1EEA /* EmailSync.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F6848A7B2214460400DD1EEA;
+			remoteInfo = EmailSyncTests;
+		};
+		F6848B4E2214637D00DD1EEA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F6848B422214635B00DD1EEA /* EmailSync.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = F6848A712214460400DD1EEA;
+			remoteInfo = EmailSync;
+		};
+		F6848B522214637D00DD1EEA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F6848AEF2214630A00DD1EEA /* EmailDetails.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = F66EB40B2211CCD000D177C5;
 			remoteInfo = EmailDetails;
 		};
-		F6848A5C22142F9400DD1EEA /* PBXContainerItemProxy */ = {
+		F6848B562214637D00DD1EEA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = F6848A4222142F5100DD1EEA /* EmailForm.xcodeproj */;
+			containerPortal = F6848B012214630A00DD1EEA /* EmailForm.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = F66EB40B2211CCD000D177C5;
 			remoteInfo = EmailForm;
 		};
-		F6848A6022142F9400DD1EEA /* PBXContainerItemProxy */ = {
+		F6848B5A2214637D00DD1EEA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = F6848A3822142F4900DD1EEA /* EmailList.xcodeproj */;
+			containerPortal = F6848AF82214630A00DD1EEA /* EmailList.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = F66EB40B2211CCD000D177C5;
 			remoteInfo = EmailList;
+		};
+		F6848B5E2214637D00DD1EEA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F6848AE62214630A00DD1EEA /* Payment.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = F6DB6FB6220C8CA30076B6B2;
+			remoteInfo = Payment;
+		};
+		F6848B622214637D00DD1EEA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F6848B0A2214630A00DD1EEA /* UserManagement.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = F6DB6F83220C8BEF0076B6B2;
+			remoteInfo = UserManagement;
 		};
 		F69610C722132D2E0082764D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -125,34 +176,6 @@
 			proxyType = 2;
 			remoteGlobalIDString = F6C93AB1220D9506004A6737;
 			remoteInfo = NetworkingTests;
-		};
-		F69610DB22132D4B0082764D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F69610D522132D4A0082764D /* UserManagement.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = F6DB6F84220C8BEF0076B6B2;
-			remoteInfo = UserManagement;
-		};
-		F69610DD22132D4B0082764D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F69610D522132D4A0082764D /* UserManagement.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = F6DB6F8D220C8BEF0076B6B2;
-			remoteInfo = UserManagementTests;
-		};
-		F69610E522132D5A0082764D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F69610DF22132D5A0082764D /* Payment.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = F6DB6FB7220C8CA30076B6B2;
-			remoteInfo = Payment;
-		};
-		F69610E722132D5A0082764D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F69610DF22132D5A0082764D /* Payment.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = F6DB6FC0220C8CA30076B6B2;
-			remoteInfo = PaymentTests;
 		};
 		F6DB7019220D7BD30076B6B2 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -177,12 +200,13 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				F6848A5B22142F9400DD1EEA /* EmailForm.framework in Embed Frameworks */,
-				F6848A5F22142F9400DD1EEA /* EmailList.framework in Embed Frameworks */,
-				F6848A5722142F9400DD1EEA /* EmailDetails.framework in Embed Frameworks */,
-				F66DABAE221400FC005DD98F /* UserManagement.framework in Embed Frameworks */,
+				F6848B612214637D00DD1EEA /* UserManagement.framework in Embed Frameworks */,
+				F6848B4D2214637D00DD1EEA /* EmailSync.framework in Embed Frameworks */,
 				F66DABA622140040005DD98F /* Networking.framework in Embed Frameworks */,
-				F66DABAA221400FC005DD98F /* Payment.framework in Embed Frameworks */,
+				F6848B512214637D00DD1EEA /* EmailDetails.framework in Embed Frameworks */,
+				F6848B5D2214637D00DD1EEA /* Payment.framework in Embed Frameworks */,
+				F6848B592214637D00DD1EEA /* EmailList.framework in Embed Frameworks */,
+				F6848B552214637D00DD1EEA /* EmailForm.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -190,12 +214,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		F6848A3822142F4900DD1EEA /* EmailList.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = EmailList.xcodeproj; path = ../../MOAEmailList/EmailList.xcodeproj; sourceTree = "<group>"; };
-		F6848A4222142F5100DD1EEA /* EmailForm.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = EmailForm.xcodeproj; path = ../../MOAEmailForm/EmailForm.xcodeproj; sourceTree = "<group>"; };
-		F6848A4C22142F5B00DD1EEA /* EmailDetails.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = EmailDetails.xcodeproj; path = ../../MOAEmailDetails/EmailDetails.xcodeproj; sourceTree = "<group>"; };
+		F6848AE62214630A00DD1EEA /* Payment.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Payment.xcodeproj; path = ../../../MOAPayment/Payment.xcodeproj; sourceTree = "<group>"; };
+		F6848AEF2214630A00DD1EEA /* EmailDetails.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = EmailDetails.xcodeproj; path = ../../../MOAEmailDetails/EmailDetails.xcodeproj; sourceTree = "<group>"; };
+		F6848AF82214630A00DD1EEA /* EmailList.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = EmailList.xcodeproj; path = ../../../MOAEmailList/EmailList.xcodeproj; sourceTree = "<group>"; };
+		F6848B012214630A00DD1EEA /* EmailForm.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = EmailForm.xcodeproj; path = ../../../MOAEmailForm/EmailForm.xcodeproj; sourceTree = "<group>"; };
+		F6848B0A2214630A00DD1EEA /* UserManagement.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = UserManagement.xcodeproj; path = ../../../MOAUserManagement/UserManagement.xcodeproj; sourceTree = "<group>"; };
+		F6848B422214635B00DD1EEA /* EmailSync.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = EmailSync.xcodeproj; path = ../../../MOAEmailSync/EmailSync.xcodeproj; sourceTree = "<group>"; };
 		F69610C222132D2E0082764D /* Networking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Networking.xcodeproj; path = ../../MOANetworking/Networking.xcodeproj; sourceTree = "<group>"; };
-		F69610D522132D4A0082764D /* UserManagement.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = UserManagement.xcodeproj; path = ../../MOAUserManagement/UserManagement.xcodeproj; sourceTree = "<group>"; };
-		F69610DF22132D5A0082764D /* Payment.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Payment.xcodeproj; path = ../../MOAPayment/Payment.xcodeproj; sourceTree = "<group>"; };
 		F6C93B872211693E004A6737 /* Networking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Networking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6C93B9622118379004A6737 /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
 		F6DB7004220D7BD10076B6B2 /* WebDE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WebDE.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -216,12 +241,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F6848A5A22142F9400DD1EEA /* EmailForm.framework in Frameworks */,
-				F6848A5E22142F9400DD1EEA /* EmailList.framework in Frameworks */,
-				F6848A5622142F9400DD1EEA /* EmailDetails.framework in Frameworks */,
-				F66DABAD221400FC005DD98F /* UserManagement.framework in Frameworks */,
+				F6848B602214637D00DD1EEA /* UserManagement.framework in Frameworks */,
+				F6848B4C2214637D00DD1EEA /* EmailSync.framework in Frameworks */,
 				F66DABA522140040005DD98F /* Networking.framework in Frameworks */,
-				F66DABA9221400FC005DD98F /* Payment.framework in Frameworks */,
+				F6848B502214637D00DD1EEA /* EmailDetails.framework in Frameworks */,
+				F6848B5C2214637D00DD1EEA /* Payment.framework in Frameworks */,
+				F6848B582214637D00DD1EEA /* EmailList.framework in Frameworks */,
+				F6848B542214637D00DD1EEA /* EmailForm.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -242,29 +268,83 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		F6848A3922142F4900DD1EEA /* Products */ = {
+		F6848ADF2214630100DD1EEA /* Actions */ = {
 			isa = PBXGroup;
 			children = (
-				F6848A3F22142F4900DD1EEA /* EmailList.framework */,
-				F6848A4122142F4900DD1EEA /* EmailListTests.xctest */,
+				F6848AEF2214630A00DD1EEA /* EmailDetails.xcodeproj */,
+				F6848B012214630A00DD1EEA /* EmailForm.xcodeproj */,
+				F6848AF82214630A00DD1EEA /* EmailList.xcodeproj */,
+				F6848AE62214630A00DD1EEA /* Payment.xcodeproj */,
+				F6848B0A2214630A00DD1EEA /* UserManagement.xcodeproj */,
+			);
+			path = Actions;
+			sourceTree = "<group>";
+		};
+		F6848AE72214630A00DD1EEA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F6848AEC2214630A00DD1EEA /* Payment.framework */,
+				F6848AEE2214630A00DD1EEA /* PaymentTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		F6848A4322142F5100DD1EEA /* Products */ = {
+		F6848AF02214630A00DD1EEA /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F6848A4922142F5100DD1EEA /* EmailForm.framework */,
-				F6848A4B22142F5100DD1EEA /* EmailFormTests.xctest */,
+				F6848AF52214630A00DD1EEA /* EmailDetails.framework */,
+				F6848AF72214630A00DD1EEA /* EmailDetailsTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		F6848A4D22142F5B00DD1EEA /* Products */ = {
+		F6848AF92214630A00DD1EEA /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F6848A5322142F5B00DD1EEA /* EmailDetails.framework */,
-				F6848A5522142F5B00DD1EEA /* EmailDetailsTests.xctest */,
+				F6848AFE2214630A00DD1EEA /* EmailList.framework */,
+				F6848B002214630A00DD1EEA /* EmailListTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F6848B022214630A00DD1EEA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F6848B072214630A00DD1EEA /* EmailForm.framework */,
+				F6848B092214630A00DD1EEA /* EmailFormTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F6848B0B2214630A00DD1EEA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F6848B102214630A00DD1EEA /* UserManagement.framework */,
+				F6848B122214630A00DD1EEA /* UserManagementTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F6848B402214631E00DD1EEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		F6848B412214634000DD1EEA /* Tasks */ = {
+			isa = PBXGroup;
+			children = (
+				F6848B422214635B00DD1EEA /* EmailSync.xcodeproj */,
+			);
+			path = Tasks;
+			sourceTree = "<group>";
+		};
+		F6848B432214635B00DD1EEA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F6848B492214635B00DD1EEA /* EmailSync.framework */,
+				F6848B4B2214635B00DD1EEA /* EmailSyncTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -278,32 +358,12 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		F69610D622132D4A0082764D /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				F69610DC22132D4B0082764D /* UserManagement.framework */,
-				F69610DE22132D4B0082764D /* UserManagementTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		F69610E022132D5A0082764D /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				F69610E622132D5A0082764D /* Payment.framework */,
-				F69610E822132D5A0082764D /* PaymentTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		F6C93B6C221168DF004A6737 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				F6848A4C22142F5B00DD1EEA /* EmailDetails.xcodeproj */,
-				F6848A4222142F5100DD1EEA /* EmailForm.xcodeproj */,
-				F6848A3822142F4900DD1EEA /* EmailList.xcodeproj */,
-				F69610DF22132D5A0082764D /* Payment.xcodeproj */,
-				F69610D522132D4A0082764D /* UserManagement.xcodeproj */,
+				F6848B412214634000DD1EEA /* Tasks */,
+				F6848B402214631E00DD1EEA /* Resources */,
+				F6848ADF2214630100DD1EEA /* Actions */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -393,11 +453,12 @@
 			);
 			dependencies = (
 				F66DABA822140040005DD98F /* PBXTargetDependency */,
-				F66DABAC221400FC005DD98F /* PBXTargetDependency */,
-				F66DABB0221400FC005DD98F /* PBXTargetDependency */,
-				F6848A5922142F9400DD1EEA /* PBXTargetDependency */,
-				F6848A5D22142F9400DD1EEA /* PBXTargetDependency */,
-				F6848A6122142F9400DD1EEA /* PBXTargetDependency */,
+				F6848B4F2214637D00DD1EEA /* PBXTargetDependency */,
+				F6848B532214637D00DD1EEA /* PBXTargetDependency */,
+				F6848B572214637D00DD1EEA /* PBXTargetDependency */,
+				F6848B5B2214637D00DD1EEA /* PBXTargetDependency */,
+				F6848B5F2214637D00DD1EEA /* PBXTargetDependency */,
+				F6848B632214637D00DD1EEA /* PBXTargetDependency */,
 			);
 			name = WebDE;
 			productName = WebDE;
@@ -476,28 +537,32 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = F6848A4D22142F5B00DD1EEA /* Products */;
-					ProjectRef = F6848A4C22142F5B00DD1EEA /* EmailDetails.xcodeproj */;
+					ProductGroup = F6848AF02214630A00DD1EEA /* Products */;
+					ProjectRef = F6848AEF2214630A00DD1EEA /* EmailDetails.xcodeproj */;
 				},
 				{
-					ProductGroup = F6848A4322142F5100DD1EEA /* Products */;
-					ProjectRef = F6848A4222142F5100DD1EEA /* EmailForm.xcodeproj */;
+					ProductGroup = F6848B022214630A00DD1EEA /* Products */;
+					ProjectRef = F6848B012214630A00DD1EEA /* EmailForm.xcodeproj */;
 				},
 				{
-					ProductGroup = F6848A3922142F4900DD1EEA /* Products */;
-					ProjectRef = F6848A3822142F4900DD1EEA /* EmailList.xcodeproj */;
+					ProductGroup = F6848AF92214630A00DD1EEA /* Products */;
+					ProjectRef = F6848AF82214630A00DD1EEA /* EmailList.xcodeproj */;
+				},
+				{
+					ProductGroup = F6848B432214635B00DD1EEA /* Products */;
+					ProjectRef = F6848B422214635B00DD1EEA /* EmailSync.xcodeproj */;
 				},
 				{
 					ProductGroup = F69610C322132D2E0082764D /* Products */;
 					ProjectRef = F69610C222132D2E0082764D /* Networking.xcodeproj */;
 				},
 				{
-					ProductGroup = F69610E022132D5A0082764D /* Products */;
-					ProjectRef = F69610DF22132D5A0082764D /* Payment.xcodeproj */;
+					ProductGroup = F6848AE72214630A00DD1EEA /* Products */;
+					ProjectRef = F6848AE62214630A00DD1EEA /* Payment.xcodeproj */;
 				},
 				{
-					ProductGroup = F69610D622132D4A0082764D /* Products */;
-					ProjectRef = F69610D522132D4A0082764D /* UserManagement.xcodeproj */;
+					ProductGroup = F6848B0B2214630A00DD1EEA /* Products */;
+					ProjectRef = F6848B0A2214630A00DD1EEA /* UserManagement.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -510,46 +575,88 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		F6848A3F22142F4900DD1EEA /* EmailList.framework */ = {
+		F6848AEC2214630A00DD1EEA /* Payment.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
-			path = EmailList.framework;
-			remoteRef = F6848A3E22142F4900DD1EEA /* PBXContainerItemProxy */;
+			path = Payment.framework;
+			remoteRef = F6848AEB2214630A00DD1EEA /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		F6848A4122142F4900DD1EEA /* EmailListTests.xctest */ = {
+		F6848AEE2214630A00DD1EEA /* PaymentTests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
-			path = EmailListTests.xctest;
-			remoteRef = F6848A4022142F4900DD1EEA /* PBXContainerItemProxy */;
+			path = PaymentTests.xctest;
+			remoteRef = F6848AED2214630A00DD1EEA /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		F6848A4922142F5100DD1EEA /* EmailForm.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = EmailForm.framework;
-			remoteRef = F6848A4822142F5100DD1EEA /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		F6848A4B22142F5100DD1EEA /* EmailFormTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = EmailFormTests.xctest;
-			remoteRef = F6848A4A22142F5100DD1EEA /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		F6848A5322142F5B00DD1EEA /* EmailDetails.framework */ = {
+		F6848AF52214630A00DD1EEA /* EmailDetails.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = EmailDetails.framework;
-			remoteRef = F6848A5222142F5B00DD1EEA /* PBXContainerItemProxy */;
+			remoteRef = F6848AF42214630A00DD1EEA /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		F6848A5522142F5B00DD1EEA /* EmailDetailsTests.xctest */ = {
+		F6848AF72214630A00DD1EEA /* EmailDetailsTests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = EmailDetailsTests.xctest;
-			remoteRef = F6848A5422142F5B00DD1EEA /* PBXContainerItemProxy */;
+			remoteRef = F6848AF62214630A00DD1EEA /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F6848AFE2214630A00DD1EEA /* EmailList.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = EmailList.framework;
+			remoteRef = F6848AFD2214630A00DD1EEA /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F6848B002214630A00DD1EEA /* EmailListTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = EmailListTests.xctest;
+			remoteRef = F6848AFF2214630A00DD1EEA /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F6848B072214630A00DD1EEA /* EmailForm.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = EmailForm.framework;
+			remoteRef = F6848B062214630A00DD1EEA /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F6848B092214630A00DD1EEA /* EmailFormTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = EmailFormTests.xctest;
+			remoteRef = F6848B082214630A00DD1EEA /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F6848B102214630A00DD1EEA /* UserManagement.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = UserManagement.framework;
+			remoteRef = F6848B0F2214630A00DD1EEA /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F6848B122214630A00DD1EEA /* UserManagementTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = UserManagementTests.xctest;
+			remoteRef = F6848B112214630A00DD1EEA /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F6848B492214635B00DD1EEA /* EmailSync.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = EmailSync.framework;
+			remoteRef = F6848B482214635B00DD1EEA /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F6848B4B2214635B00DD1EEA /* EmailSyncTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = EmailSyncTests.xctest;
+			remoteRef = F6848B4A2214635B00DD1EEA /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		F69610C822132D2E0082764D /* Networking.framework */ = {
@@ -564,34 +671,6 @@
 			fileType = wrapper.cfbundle;
 			path = NetworkingTests.xctest;
 			remoteRef = F69610C922132D2E0082764D /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		F69610DC22132D4B0082764D /* UserManagement.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = UserManagement.framework;
-			remoteRef = F69610DB22132D4B0082764D /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		F69610DE22132D4B0082764D /* UserManagementTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = UserManagementTests.xctest;
-			remoteRef = F69610DD22132D4B0082764D /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		F69610E622132D5A0082764D /* Payment.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Payment.framework;
-			remoteRef = F69610E522132D5A0082764D /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		F69610E822132D5A0082764D /* PaymentTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = PaymentTests.xctest;
-			remoteRef = F69610E722132D5A0082764D /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -656,30 +735,35 @@
 			name = Networking;
 			targetProxy = F66DABA722140040005DD98F /* PBXContainerItemProxy */;
 		};
-		F66DABAC221400FC005DD98F /* PBXTargetDependency */ = {
+		F6848B4F2214637D00DD1EEA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = Payment;
-			targetProxy = F66DABAB221400FC005DD98F /* PBXContainerItemProxy */;
+			name = EmailSync;
+			targetProxy = F6848B4E2214637D00DD1EEA /* PBXContainerItemProxy */;
 		};
-		F66DABB0221400FC005DD98F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = UserManagement;
-			targetProxy = F66DABAF221400FC005DD98F /* PBXContainerItemProxy */;
-		};
-		F6848A5922142F9400DD1EEA /* PBXTargetDependency */ = {
+		F6848B532214637D00DD1EEA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = EmailDetails;
-			targetProxy = F6848A5822142F9400DD1EEA /* PBXContainerItemProxy */;
+			targetProxy = F6848B522214637D00DD1EEA /* PBXContainerItemProxy */;
 		};
-		F6848A5D22142F9400DD1EEA /* PBXTargetDependency */ = {
+		F6848B572214637D00DD1EEA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = EmailForm;
-			targetProxy = F6848A5C22142F9400DD1EEA /* PBXContainerItemProxy */;
+			targetProxy = F6848B562214637D00DD1EEA /* PBXContainerItemProxy */;
 		};
-		F6848A6122142F9400DD1EEA /* PBXTargetDependency */ = {
+		F6848B5B2214637D00DD1EEA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = EmailList;
-			targetProxy = F6848A6022142F9400DD1EEA /* PBXContainerItemProxy */;
+			targetProxy = F6848B5A2214637D00DD1EEA /* PBXContainerItemProxy */;
+		};
+		F6848B5F2214637D00DD1EEA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Payment;
+			targetProxy = F6848B5E2214637D00DD1EEA /* PBXContainerItemProxy */;
+		};
+		F6848B632214637D00DD1EEA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = UserManagement;
+			targetProxy = F6848B622214637D00DD1EEA /* PBXContainerItemProxy */;
 		};
 		F6DB701A220D7BD30076B6B2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;

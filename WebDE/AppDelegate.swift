@@ -12,6 +12,7 @@ import class UserManagement.Module
 import class EmailList.Module
 import class EmailDetails.Module
 import class EmailForm.Module
+import class EmailSync.Module
 import Networking
 
 @UIApplicationMain
@@ -23,7 +24,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                                                                        EmailDetails.Module.self,
                                                                        EmailList.Module.self,
                                                                        Payment.Module.self,
-                                                                       UserManagement.Module.self],
+                                                                       UserManagement.Module.self,
+                                                                       EmailSync.Module.self],
                                                  presentationBlock: presentationBlock,
                                                  dismissBlock: {
                                                     $0.dismiss(animated: true, completion: nil)
