@@ -66,8 +66,7 @@ final class Networking: NetworkingType {
                     }
                     let retryBlock = { (canRetry: Bool) in
                         guard canRetry else {
-                            let error = ResponseError.unauthorized401(error: nil)
-                            completionBlock(module, .error(error))
+                            completionBlock(module, result)
                             return
                         }
                         self.execute(request: request,
