@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F66DABA522140040005DD98F /* Networking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F69610C822132D2E0082764D /* Networking.framework */; };
+		F66DABA622140040005DD98F /* Networking.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F69610C822132D2E0082764D /* Networking.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F66DABA9221400FC005DD98F /* Payment.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F69610E622132D5A0082764D /* Payment.framework */; };
+		F66DABAA221400FC005DD98F /* Payment.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F69610E622132D5A0082764D /* Payment.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F66DABAD221400FC005DD98F /* UserManagement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F69610DC22132D4B0082764D /* UserManagement.framework */; };
+		F66DABAE221400FC005DD98F /* UserManagement.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F69610DC22132D4B0082764D /* UserManagement.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F66DABB1221400FC005DD98F /* Email.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F69610D222132D3F0082764D /* Email.framework */; };
+		F66DABB2221400FC005DD98F /* Email.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F69610D222132D3F0082764D /* Email.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F6C93B9722118379004A6737 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C93B9622118379004A6737 /* Networking.swift */; };
 		F6DB7008220D7BD10076B6B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6DB7007220D7BD10076B6B2 /* AppDelegate.swift */; };
 		F6DB700F220D7BD30076B6B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6DB700E220D7BD30076B6B2 /* Assets.xcassets */; };
@@ -16,6 +24,34 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		F66DABA722140040005DD98F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F69610C222132D2E0082764D /* Networking.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = F6C93AA7220D9506004A6737;
+			remoteInfo = Networking;
+		};
+		F66DABAB221400FC005DD98F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F69610DF22132D5A0082764D /* Payment.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = F6DB6FB6220C8CA30076B6B2;
+			remoteInfo = Payment;
+		};
+		F66DABAF221400FC005DD98F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F69610D522132D4A0082764D /* UserManagement.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = F6DB6F83220C8BEF0076B6B2;
+			remoteInfo = UserManagement;
+		};
+		F66DABB3221400FC005DD98F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F69610CB22132D3F0082764D /* Email.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = F66EB40B2211CCD000D177C5;
+			remoteInfo = Email;
+		};
 		F69610C722132D2E0082764D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = F69610C222132D2E0082764D /* Networking.xcodeproj */;
@@ -95,6 +131,10 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				F66DABAE221400FC005DD98F /* UserManagement.framework in Embed Frameworks */,
+				F66DABA622140040005DD98F /* Networking.framework in Embed Frameworks */,
+				F66DABAA221400FC005DD98F /* Payment.framework in Embed Frameworks */,
+				F66DABB2221400FC005DD98F /* Email.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -126,6 +166,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F66DABAD221400FC005DD98F /* UserManagement.framework in Frameworks */,
+				F66DABA522140040005DD98F /* Networking.framework in Frameworks */,
+				F66DABA9221400FC005DD98F /* Payment.framework in Frameworks */,
+				F66DABB1221400FC005DD98F /* Email.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,6 +320,10 @@
 			buildRules = (
 			);
 			dependencies = (
+				F66DABA822140040005DD98F /* PBXTargetDependency */,
+				F66DABAC221400FC005DD98F /* PBXTargetDependency */,
+				F66DABB0221400FC005DD98F /* PBXTargetDependency */,
+				F66DABB4221400FC005DD98F /* PBXTargetDependency */,
 			);
 			name = WebDE;
 			productName = WebDE;
@@ -493,6 +541,26 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		F66DABA822140040005DD98F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Networking;
+			targetProxy = F66DABA722140040005DD98F /* PBXContainerItemProxy */;
+		};
+		F66DABAC221400FC005DD98F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Payment;
+			targetProxy = F66DABAB221400FC005DD98F /* PBXContainerItemProxy */;
+		};
+		F66DABB0221400FC005DD98F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = UserManagement;
+			targetProxy = F66DABAF221400FC005DD98F /* PBXContainerItemProxy */;
+		};
+		F66DABB4221400FC005DD98F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Email;
+			targetProxy = F66DABB3221400FC005DD98F /* PBXContainerItemProxy */;
+		};
 		F6DB701A220D7BD30076B6B2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = F6DB7003220D7BD10076B6B2 /* WebDE */;
@@ -636,6 +704,7 @@
 		F6DB702D220D7BD30076B6B2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -658,6 +727,7 @@
 		F6DB702E220D7BD30076B6B2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				FRAMEWORK_SEARCH_PATHS = (
