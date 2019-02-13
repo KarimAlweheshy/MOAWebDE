@@ -10,70 +10,74 @@ import UIKit
 import Networking
 
 final class Networking: NetworkingType {
+    public let modules: [ModuleType.Type]
     
-    var presentationBlock: ((UIViewController, (() -> Void)?) -> Void)? = nil
-    var dismissBlock: ((UIViewController, (() -> Void)?) -> Void)? = nil
+    fileprivate var presentationBlock: (UIViewController) -> Void
+    fileprivate var dismissBlock: (UIViewController) -> Void
     
-    fileprivate var modules = [Module.Type]()
     fileprivate let remoteHost = "google"
     fileprivate var urlSession: URLSession
     fileprivate var isAuthorized = false
     
-    public init(configuration: URLSessionConfiguration = .default) {
+    public init(modules: [ModuleType.Type],
+                presentationBlock: @escaping (UIViewController) -> Void,
+                dismissBlock: @escaping (UIViewController) -> Void,
+                configuration: URLSessionConfiguration = .default) {
+        self.modules = modules
+        self.presentationBlock = presentationBlock
+        self.dismissBlock = dismissBlock
         urlSession = URLSession(configuration: configuration)
     }
     
-    public func register(module: Module.Type) {
-        modules.append(module)
-    }
-    
-    func execute<T>(request: InternalRequest, completionHandler: @escaping (Result<T>) -> Void) where T : Decodable, T : Encodable {
-        execute(request: request, presentationBlock: presentationBlock, dismissBlock: dismissBlock, completionHandler: completionHandler)
-    }
-    
-    public func execute<T>(request: InternalRequest,
-                           presentationBlock: ((UIViewController, (() -> Void)?) -> Void)?,
-                           dismissBlock: ((UIViewController, (() -> Void)?) -> Void)?,
-                           completionHandler: @escaping (Result<T>) -> Void) where T : Decodable, T : Encodable {
+    public func execute<T: Codable>(request: InternalRequest,
+                                    presentationBlock: @escaping (UIViewController) -> Void,
+                                    dismissBlock: @escaping (UIViewController) -> Void,
+                                    completionHandler: @escaping (Result<T>) -> Void) {
         
-        // Safe guard the expected response type of a request
-        guard T.self == type(of: request).responseType else {
+        let canHandleModules = modules.filter {
+            let hasCapability = $0.capabilities.contains { $0 == type(of: request) }
+            let hasCorrectResponseType = T.self == type(of: request).responseType
+            return hasCapability && hasCorrectResponseType
+        }
+        
+        guard !canHandleModules.isEmpty else {
             completionHandler(.error(ResponseError.badRequest400(error: nil)))
             return
         }
         
-        let executableModules = modules.filter { $0.Facade.contains(request: request) }
-        
-        guard !executableModules.isEmpty else {
-            completionHandler(.error(ResponseError.other400(error: nil)))
-            return
-        }
-        
-        executableModules.forEach {
-            $0.execute(networking: self, presentationBlock: presentationBlock ?? self.presentationBlock,
-                       dismissBlock: dismissBlock ?? self.dismissBlock,
-                       request: request) { (result: Result<T>) in
-                        switch result {
-                        case .success: completionHandler(result)
-                        case .error(let error):
-                            if let error = error as? ResponseError, error.errorCode == 401 {
-                                // Authorize and re-login
-                                let requestBody = ExplicitLoginRequestBody(email: nil, password: nil)
-                                let authRequest = ExplicitLoginRequest(data: requestBody)
-                                self.execute(request: authRequest,
-                                             presentationBlock: self.presentationBlock,
-                                             dismissBlock: self.dismissBlock) { (result: Result<AuthenticationResponse>) in
-                                                switch result {
-                                                case .success(let authentication):
-                                                    self.updateSession(authToken: authentication.authToken)
-                                                    self.execute(request: request, completionHandler: completionHandler)
-                                                case .error(let error): completionHandler(.error(error))
-                                                }
-                                }
+        canHandleModules.forEach { Module in
+            let module = Module.init(presentationBlock: presentationBlock, dismissBlock: dismissBlock)
+            module.execute(networking: self, request: request) { (result: Result<T>) in
+                switch result {
+                case .success: completionHandler(result)
+                case .error(let error):
+                    if let error = error as? ResponseError, error.errorCode == 401 {
+                        // Authorize and re-login
+                        self.handleUnauthorized { (isAuthorized) in
+                            if isAuthorized {
+                                self.execute(request: request,
+                                             presentationBlock: presentationBlock,
+                                             dismissBlock: dismissBlock,
+                                             completionHandler: completionHandler)
                             } else {
-                                completionHandler(result)
+                                completionHandler(.error(ResponseError.unauthorized401(error: nil)))
                             }
                         }
+                    } else if let error = error as? ResponseError, error.errorCode == 403 {
+                        self.handleForbidden { success in
+                            if success {
+                                self.execute(request: request,
+                                             presentationBlock: presentationBlock,
+                                             dismissBlock: dismissBlock,
+                                             completionHandler: completionHandler)
+                            } else {
+                                completionHandler(.error(ResponseError.forbidden403(error: nil)))
+                            }
+                        }
+                    } else {
+                        completionHandler(result)
+                    }
+                }
             }
         }
     }
@@ -83,7 +87,6 @@ final class Networking: NetworkingType {
         if !isAuthorized {
             self.handleUnauthorized { success in
                 if success {
-                    self.isAuthorized = true
                     self.execute(request: request, completionHandler: completionHandler)
                 } else {
                     completionHandler(.error(ResponseError.unauthorized401(error: nil)))
@@ -153,9 +156,12 @@ extension Networking {
                      dismissBlock: self.dismissBlock) { (result: Result<AuthenticationResponse>) in
             switch result {
             case .success(let authentication):
+                self.isAuthorized = true
                 self.updateSession(authToken: authentication.authToken)
                 completionHandler(true)
-            case .error: completionHandler(false)
+            case .error:
+                self.isAuthorized = false
+                completionHandler(false)
             }
         }
     }

@@ -7,9 +7,9 @@
 //
 
 import UIKit
-import Payment
-import UserManagement
-import Email
+import class Payment.Module
+import class UserManagement.Module
+import class Email.Module
 import Networking
 
 @UIApplicationMain
@@ -17,17 +17,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     
-    fileprivate lazy var networking: Networking = {
-        let networking = Networking()
-        networking.presentationBlock = presentationBlock
-        networking.dismissBlock = { $0.dismiss(animated: true, completion: $1) }
-        
-        networking.register(module: EmailModule.self)
-        networking.register(module: UserManagementModule.self)
-        networking.register(module: PaymentModule.self)
-        
-        return networking
-    }()
+    fileprivate lazy var networking: Networking = Networking(modules: [Email.Module.self,
+                                                           Payment.Module.self,
+                                                           UserManagement.Module.self],
+                                                 presentationBlock: presentationBlock,
+                                                 dismissBlock: {
+                                                    $0.dismiss(animated: true, completion: nil)
+    })
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
@@ -41,7 +37,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         networking.execute(request: payRequest,
                            presentationBlock: addToTabBar,
-                           dismissBlock: nil,
+                           dismissBlock: { _ in },
                            completionHandler: { (result: Result<PaymentResponse>) in
             self.window?.rootViewController = UINavigationController()
         })
@@ -50,8 +46,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         networking.execute(request: emailRequest,
                            presentationBlock: addToTabBar,
-                           dismissBlock: nil,
-           completionHandler: { (result: Result<EmailResponse>) in
+                           dismissBlock: { _ in },
+                           completionHandler: { (result: Result<EmailResponse>) in
             self.window?.rootViewController = UINavigationController()
         })
 
@@ -78,8 +74,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 }
 
 extension AppDelegate {
-    fileprivate func presentationBlock(viewController: UIViewController,
-                                       completionHandler: (() -> Void)?) {
+    fileprivate func presentationBlock(viewController: UIViewController) {
         let presentedViewController = viewController is UINavigationController ? viewController : UINavigationController(rootViewController: viewController)
         
         if let rootViewController = self.window?.rootViewController {
@@ -93,17 +88,17 @@ extension AppDelegate {
                 return viewController.presentedViewController ?? viewController
             }
             
-            topViewController(viewController: rootViewController).present(presentedViewController, animated: true, completion: completionHandler)
+            let presentingViewController = topViewController(viewController: rootViewController)
+            presentingViewController.present(presentedViewController,
+                                             animated: true,
+                                             completion: nil)
         } else {
             self.window?.rootViewController = presentedViewController
-            completionHandler?()
         }
     }
     
-    fileprivate func addToTabBar(_ viewController: UIViewController,
-                                 completionHandler: (() -> Void)?) {
+    fileprivate func addToTabBar(_ viewController: UIViewController) {
         guard let tabController = window?.rootViewController as? UITabBarController else {
-            completionHandler?()
             return
         }
         
@@ -112,8 +107,6 @@ extension AppDelegate {
         var viewControllers = tabController.viewControllers ?? [UIViewController]()
         viewControllers.append(navigationController)
         tabController.viewControllers = viewControllers
-        
-        completionHandler?()
     }
 
 }
