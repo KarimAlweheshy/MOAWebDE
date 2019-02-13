@@ -19,6 +19,8 @@ final class Networking: NetworkingType {
     fileprivate var urlSession: URLSession
     fileprivate var isAuthorized = false
     
+    fileprivate var inMemoryModule = [ModuleType]()
+    
     public init(modules: [ModuleType.Type],
                 presentationBlock: @escaping (UIViewController) -> Void,
                 dismissBlock: @escaping (UIViewController) -> Void,
@@ -29,10 +31,10 @@ final class Networking: NetworkingType {
         urlSession = URLSession(configuration: configuration)
     }
     
-    public func execute<T: Codable>(request: InternalRequest,
-                                    presentationBlock: @escaping (UIViewController) -> Void,
-                                    dismissBlock: @escaping (UIViewController) -> Void,
-                                    completionHandler: @escaping (Result<T>) -> Void) {
+    public func execute<T>(request: InternalRequest,
+                           presentationBlock: @escaping (UIViewController) -> Void,
+                           dismissBlock: @escaping (UIViewController) -> Void,
+                           completionHandler: @escaping (Result<T>) -> Void) {
         
         let canHandleModules = modules.filter {
             let hasCapability = $0.capabilities.contains { $0 == type(of: request) }
@@ -45,40 +47,42 @@ final class Networking: NetworkingType {
             return
         }
         
+        let completionBlock = { (module: ModuleType, result: Result<T>) in
+            self.inMemoryModule.removeAll {
+                $0 === module
+            }
+            completionHandler(result)
+        }
+        
         canHandleModules.forEach { Module in
             let module = Module.init(presentationBlock: presentationBlock, dismissBlock: dismissBlock)
             module.execute(networking: self, request: request) { (result: Result<T>) in
                 switch result {
-                case .success: completionHandler(result)
+                case .success: completionBlock(module, result)
                 case .error(let error):
-                    if let error = error as? ResponseError, error.errorCode == 401 {
-                        // Authorize and re-login
-                        self.handleUnauthorized { (isAuthorized) in
-                            if isAuthorized {
-                                self.execute(request: request,
-                                             presentationBlock: presentationBlock,
-                                             dismissBlock: dismissBlock,
-                                             completionHandler: completionHandler)
-                            } else {
-                                completionHandler(.error(ResponseError.unauthorized401(error: nil)))
-                            }
+                    guard let error = error as? ResponseError else {
+                        completionBlock(module, result)
+                        return
+                    }
+                    let retryBlock = { (canRetry: Bool) in
+                        guard canRetry else {
+                            let error = ResponseError.unauthorized401(error: nil)
+                            completionBlock(module, .error(error))
+                            return
                         }
-                    } else if let error = error as? ResponseError, error.errorCode == 403 {
-                        self.handleForbidden { success in
-                            if success {
-                                self.execute(request: request,
-                                             presentationBlock: presentationBlock,
-                                             dismissBlock: dismissBlock,
-                                             completionHandler: completionHandler)
-                            } else {
-                                completionHandler(.error(ResponseError.forbidden403(error: nil)))
-                            }
-                        }
-                    } else {
-                        completionHandler(result)
+                        self.execute(request: request,
+                                     presentationBlock: presentationBlock,
+                                     dismissBlock: dismissBlock,
+                                     completionHandler: { completionBlock(module, $0) })
+                    }
+                    switch error.errorCode {
+                    case 401: self.handleForbidden(completionHandler: retryBlock)
+                    case 403: self.handleForbidden(completionHandler: retryBlock)
+                    default: completionBlock(module, result)
                     }
                 }
             }
+            inMemoryModule.append(module)
         }
     }
     
