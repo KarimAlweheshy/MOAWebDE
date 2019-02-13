@@ -9,7 +9,9 @@
 import UIKit
 import class Payment.Module
 import class UserManagement.Module
-import class Email.Module
+import class EmailList.Module
+import class EmailDetails.Module
+import class EmailForm.Module
 import Networking
 
 @UIApplicationMain
@@ -17,9 +19,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     
-    fileprivate lazy var networking: Networking = Networking(modules: [Email.Module.self,
-                                                           Payment.Module.self,
-                                                           UserManagement.Module.self],
+    fileprivate lazy var networking: Networking = Networking(modules: [EmailForm.Module.self,
+                                                                       EmailDetails.Module.self,
+                                                                       EmailList.Module.self,
+                                                                       Payment.Module.self,
+                                                                       UserManagement.Module.self],
                                                  presentationBlock: presentationBlock,
                                                  dismissBlock: {
                                                     $0.dismiss(animated: true, completion: nil)
