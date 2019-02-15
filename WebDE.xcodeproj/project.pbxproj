@@ -21,6 +21,20 @@
 		F6848B5D2214637D00DD1EEA /* Payment.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F6848AEC2214630A00DD1EEA /* Payment.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F6848B602214637D00DD1EEA /* UserManagement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6848B102214630A00DD1EEA /* UserManagement.framework */; };
 		F6848B612214637D00DD1EEA /* UserManagement.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F6848B102214630A00DD1EEA /* UserManagement.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F6848B8422157DC900DD1EEA /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C93B9622118379004A6737 /* Networking.swift */; };
+		F6848B8722157DC900DD1EEA /* EmailSync.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6848B492214635B00DD1EEA /* EmailSync.framework */; };
+		F6848B8822157DC900DD1EEA /* Networking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F69610C822132D2E0082764D /* Networking.framework */; };
+		F6848B8922157DC900DD1EEA /* EmailDetails.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6848AF52214630A00DD1EEA /* EmailDetails.framework */; };
+		F6848B8B22157DC900DD1EEA /* EmailList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6848AFE2214630A00DD1EEA /* EmailList.framework */; };
+		F6848B8C22157DC900DD1EEA /* EmailForm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6848B072214630A00DD1EEA /* EmailForm.framework */; };
+		F6848B8E22157DC900DD1EEA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6DB7010220D7BD30076B6B2 /* LaunchScreen.storyboard */; };
+		F6848B8F22157DC900DD1EEA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6DB700E220D7BD30076B6B2 /* Assets.xcassets */; };
+		F6848B9222157DC900DD1EEA /* EmailSync.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F6848B492214635B00DD1EEA /* EmailSync.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F6848B9322157DC900DD1EEA /* Networking.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F69610C822132D2E0082764D /* Networking.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F6848B9422157DC900DD1EEA /* EmailDetails.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F6848AF52214630A00DD1EEA /* EmailDetails.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F6848B9622157DC900DD1EEA /* EmailList.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F6848AFE2214630A00DD1EEA /* EmailList.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F6848B9722157DC900DD1EEA /* EmailForm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F6848B072214630A00DD1EEA /* EmailForm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F6848BA622157DF100DD1EEA /* NewAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6848BA422157DEF00DD1EEA /* NewAppDelegate.swift */; };
 		F6C93B9722118379004A6737 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C93B9622118379004A6737 /* Networking.swift */; };
 		F6DB7008220D7BD10076B6B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6DB7007220D7BD10076B6B2 /* AppDelegate.swift */; };
 		F6DB700F220D7BD30076B6B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6DB700E220D7BD30076B6B2 /* Assets.xcassets */; };
@@ -163,6 +177,41 @@
 			remoteGlobalIDString = F6DB6F83220C8BEF0076B6B2;
 			remoteInfo = UserManagement;
 		};
+		F6848B7522157DC900DD1EEA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F69610C222132D2E0082764D /* Networking.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = F6C93AA7220D9506004A6737;
+			remoteInfo = Networking;
+		};
+		F6848B7722157DC900DD1EEA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F6848B422214635B00DD1EEA /* EmailSync.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = F6848A712214460400DD1EEA;
+			remoteInfo = EmailSync;
+		};
+		F6848B7922157DC900DD1EEA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F6848AEF2214630A00DD1EEA /* EmailDetails.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = F66EB40B2211CCD000D177C5;
+			remoteInfo = EmailDetails;
+		};
+		F6848B7B22157DC900DD1EEA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F6848B012214630A00DD1EEA /* EmailForm.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = F66EB40B2211CCD000D177C5;
+			remoteInfo = EmailForm;
+		};
+		F6848B7D22157DC900DD1EEA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F6848AF82214630A00DD1EEA /* EmailList.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = F66EB40B2211CCD000D177C5;
+			remoteInfo = EmailList;
+		};
 		F69610C722132D2E0082764D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = F69610C222132D2E0082764D /* Networking.xcodeproj */;
@@ -194,6 +243,21 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		F6848B9022157DC900DD1EEA /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				F6848B9222157DC900DD1EEA /* EmailSync.framework in Embed Frameworks */,
+				F6848B9322157DC900DD1EEA /* Networking.framework in Embed Frameworks */,
+				F6848B9422157DC900DD1EEA /* EmailDetails.framework in Embed Frameworks */,
+				F6848B9622157DC900DD1EEA /* EmailList.framework in Embed Frameworks */,
+				F6848B9722157DC900DD1EEA /* EmailForm.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F6C93AE8220D9BFC004A6737 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -220,6 +284,9 @@
 		F6848B012214630A00DD1EEA /* EmailForm.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = EmailForm.xcodeproj; path = ../../../MOAEmailForm/EmailForm.xcodeproj; sourceTree = "<group>"; };
 		F6848B0A2214630A00DD1EEA /* UserManagement.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = UserManagement.xcodeproj; path = ../../../MOAUserManagement/UserManagement.xcodeproj; sourceTree = "<group>"; };
 		F6848B422214635B00DD1EEA /* EmailSync.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = EmailSync.xcodeproj; path = ../../../MOAEmailSync/EmailSync.xcodeproj; sourceTree = "<group>"; };
+		F6848B9B22157DC900DD1EEA /* WebDENew.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WebDENew.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F6848B9C22157DC900DD1EEA /* WebDE copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "WebDE copy-Info.plist"; path = "/Users/kAlweheshy/MOAWebDE/WebDE copy-Info.plist"; sourceTree = "<absolute>"; };
+		F6848BA422157DEF00DD1EEA /* NewAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewAppDelegate.swift; sourceTree = "<group>"; };
 		F69610C222132D2E0082764D /* Networking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Networking.xcodeproj; path = ../../MOANetworking/Networking.xcodeproj; sourceTree = "<group>"; };
 		F6C93B872211693E004A6737 /* Networking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Networking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6C93B9622118379004A6737 /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
@@ -237,6 +304,18 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		F6848B8522157DC900DD1EEA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F6848B8722157DC900DD1EEA /* EmailSync.framework in Frameworks */,
+				F6848B8822157DC900DD1EEA /* Networking.framework in Frameworks */,
+				F6848B8922157DC900DD1EEA /* EmailDetails.framework in Frameworks */,
+				F6848B8B22157DC900DD1EEA /* EmailList.framework in Frameworks */,
+				F6848B8C22157DC900DD1EEA /* EmailForm.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F6DB7001220D7BD10076B6B2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -387,6 +466,7 @@
 				F6DB7026220D7BD30076B6B2 /* WebDEUITests */,
 				F6DB7005220D7BD10076B6B2 /* Products */,
 				F6DB7035220D7C400076B6B2 /* Frameworks */,
+				F6848B9C22157DC900DD1EEA /* WebDE copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -396,6 +476,7 @@
 				F6DB7004220D7BD10076B6B2 /* WebDE.app */,
 				F6DB7018220D7BD30076B6B2 /* WebDETests.xctest */,
 				F6DB7023220D7BD30076B6B2 /* WebDEUITests.xctest */,
+				F6848B9B22157DC900DD1EEA /* WebDENew.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -404,6 +485,7 @@
 			isa = PBXGroup;
 			children = (
 				F6DB7007220D7BD10076B6B2 /* AppDelegate.swift */,
+				F6848BA422157DEF00DD1EEA /* NewAppDelegate.swift */,
 				F6DB700E220D7BD30076B6B2 /* Assets.xcassets */,
 				F6DB7010220D7BD30076B6B2 /* LaunchScreen.storyboard */,
 				F6DB7013220D7BD30076B6B2 /* Info.plist */,
@@ -440,6 +522,29 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		F6848B7322157DC900DD1EEA /* WebDENew */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F6848B9822157DC900DD1EEA /* Build configuration list for PBXNativeTarget "WebDENew" */;
+			buildPhases = (
+				F6848B8222157DC900DD1EEA /* Sources */,
+				F6848B8522157DC900DD1EEA /* Frameworks */,
+				F6848B8D22157DC900DD1EEA /* Resources */,
+				F6848B9022157DC900DD1EEA /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F6848B7422157DC900DD1EEA /* PBXTargetDependency */,
+				F6848B7622157DC900DD1EEA /* PBXTargetDependency */,
+				F6848B7822157DC900DD1EEA /* PBXTargetDependency */,
+				F6848B7A22157DC900DD1EEA /* PBXTargetDependency */,
+				F6848B7C22157DC900DD1EEA /* PBXTargetDependency */,
+			);
+			name = WebDENew;
+			productName = WebDE;
+			productReference = F6848B9B22157DC900DD1EEA /* WebDENew.app */;
+			productType = "com.apple.product-type.application";
+		};
 		F6DB7003220D7BD10076B6B2 /* WebDE */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = F6DB702C220D7BD30076B6B2 /* Build configuration list for PBXNativeTarget "WebDE" */;
@@ -568,6 +673,7 @@
 			projectRoot = "";
 			targets = (
 				F6DB7003220D7BD10076B6B2 /* WebDE */,
+				F6848B7322157DC900DD1EEA /* WebDENew */,
 				F6DB7017220D7BD30076B6B2 /* WebDETests */,
 				F6DB7022220D7BD30076B6B2 /* WebDEUITests */,
 			);
@@ -676,6 +782,15 @@
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
+		F6848B8D22157DC900DD1EEA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F6848B8E22157DC900DD1EEA /* LaunchScreen.storyboard in Resources */,
+				F6848B8F22157DC900DD1EEA /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F6DB7002220D7BD10076B6B2 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -702,6 +817,15 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		F6848B8222157DC900DD1EEA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F6848B8422157DC900DD1EEA /* Networking.swift in Sources */,
+				F6848BA622157DF100DD1EEA /* NewAppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F6DB7000220D7BD10076B6B2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -765,6 +889,31 @@
 			name = UserManagement;
 			targetProxy = F6848B622214637D00DD1EEA /* PBXContainerItemProxy */;
 		};
+		F6848B7422157DC900DD1EEA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Networking;
+			targetProxy = F6848B7522157DC900DD1EEA /* PBXContainerItemProxy */;
+		};
+		F6848B7622157DC900DD1EEA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = EmailSync;
+			targetProxy = F6848B7722157DC900DD1EEA /* PBXContainerItemProxy */;
+		};
+		F6848B7822157DC900DD1EEA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = EmailDetails;
+			targetProxy = F6848B7922157DC900DD1EEA /* PBXContainerItemProxy */;
+		};
+		F6848B7A22157DC900DD1EEA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = EmailForm;
+			targetProxy = F6848B7B22157DC900DD1EEA /* PBXContainerItemProxy */;
+		};
+		F6848B7C22157DC900DD1EEA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = EmailList;
+			targetProxy = F6848B7D22157DC900DD1EEA /* PBXContainerItemProxy */;
+		};
 		F6DB701A220D7BD30076B6B2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = F6DB7003220D7BD10076B6B2 /* WebDE */;
@@ -789,6 +938,52 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		F6848B9922157DC900DD1EEA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = "WebDE copy-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = app.1und1.WebDENew;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F6848B9A22157DC900DD1EEA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = "WebDE copy-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = app.1und1.WebDENew;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		F6DB702A220D7BD30076B6B2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1032,6 +1227,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		F6848B9822157DC900DD1EEA /* Build configuration list for PBXNativeTarget "WebDENew" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F6848B9922157DC900DD1EEA /* Debug */,
+				F6848B9A22157DC900DD1EEA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		F6DB6FFF220D7BD10076B6B2 /* Build configuration list for PBXProject "WebDE" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

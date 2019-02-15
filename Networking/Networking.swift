@@ -10,7 +10,8 @@ import UIKit
 import Networking
 
 final class Networking: NetworkingType {
-    public let modules: [ModuleType.Type]
+    public let registeredModules: [ModuleType.Type]
+    public var inMemoryModule = [ModuleType]()
     
     fileprivate var presentationBlock: (UIViewController) -> Void
     fileprivate var dismissBlock: (UIViewController) -> Void
@@ -19,13 +20,11 @@ final class Networking: NetworkingType {
     fileprivate var urlSession: URLSession
     fileprivate var isAuthorized = false
     
-    fileprivate var inMemoryModule = [ModuleType]()
-    
     public init(modules: [ModuleType.Type],
                 presentationBlock: @escaping (UIViewController) -> Void,
                 dismissBlock: @escaping (UIViewController) -> Void,
                 configuration: URLSessionConfiguration = .default) {
-        self.modules = modules
+        self.registeredModules = modules
         self.presentationBlock = presentationBlock
         self.dismissBlock = dismissBlock
         urlSession = URLSession(configuration: configuration)
@@ -36,7 +35,7 @@ final class Networking: NetworkingType {
                            dismissBlock: @escaping (UIViewController) -> Void,
                            completionHandler: @escaping (Result<T>) -> Void) {
         
-        let canHandleModules = modules.filter {
+        let canHandleModules = registeredModules.filter {
             let hasCapability = $0.capabilities.contains { $0 == type(of: request) }
             let hasCorrectResponseType = T.self == type(of: request).responseType
             return hasCapability && hasCorrectResponseType
@@ -125,11 +124,10 @@ final class Networking: NetworkingType {
                     }
                     if urlResponse.statusCode == 401 {
                         self.handleUnauthorized { retryBlock($0, .unauthorized401(error: nil))}
-                        return
                     } else if urlResponse.statusCode == 403 {
                         self.handleForbidden { retryBlock($0, .forbidden403(error: nil))}
-                        return
                     }
+                    return
                 default: apiError = error
                 }
             }

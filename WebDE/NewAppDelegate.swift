@@ -1,14 +1,12 @@
 //
-//  AppDelegate.swift
+//  NewAppDelegate.swift
 //  WebDE
 //
-//  Created by Karim Alweheshy on 2/8/19.
+//  Created by Karim Alweheshy on 2/14/19.
 //  Copyright © 2019 Karim Alweheshy. All rights reserved.
 //
 
 import UIKit
-import class Payment.Module
-import class UserManagement.Module
 import class EmailList.Module
 import class EmailDetails.Module
 import class EmailForm.Module
@@ -17,16 +15,15 @@ import Networking
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
+    
     var window: UIWindow?
     
     fileprivate lazy var networking: Networking =
         Networking(modules: [EmailForm.Module.self, EmailDetails.Module.self,
-                             EmailList.Module.self, Payment.Module.self,
-                             UserManagement.Module.self, EmailSync.Module.self],
+                             EmailList.Module.self, EmailSync.Module.self],
                    presentationBlock: presentationBlock,
                    dismissBlock: { $0.dismiss(animated: true, completion: nil) })
-
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         window = UIWindow()
@@ -35,44 +32,35 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let tabController = UITabBarController()
         window?.rootViewController = tabController
         
-        let payRequest = PaymentPayRequest(data: PaymentPayRequestBody(amount: nil))
-        
-        networking.execute(request: payRequest,
-                           presentationBlock: addToTabBar,
-                           dismissBlock: { _ in },
-                           completionHandler: { (result: Result<PaymentResponse>) in
-            self.window?.rootViewController = UINavigationController()
-        })
-        
         let emailRequest = EmailListRequest(data: EmailListRequestBody(filters: [String : String]()))
         
         networking.execute(request: emailRequest,
                            presentationBlock: addToTabBar,
                            dismissBlock: { _ in },
                            completionHandler: { (result: Result<EmailResponse>) in
-            self.window?.rootViewController = UINavigationController()
+                            self.window?.rootViewController = UINavigationController()
         })
-
+        
         return true
     }
-
+    
     func applicationWillResignActive(_ application: UIApplication) {
         
     }
-
+    
     func applicationDidEnterBackground(_ application: UIApplication) {
     }
-
+    
     func applicationWillEnterForeground(_ application: UIApplication) {
     }
-
+    
     func applicationDidBecomeActive(_ application: UIApplication) {
     }
-
+    
     func applicationWillTerminate(_ application: UIApplication) {
     }
-
-
+    
+    
 }
 
 extension AppDelegate {
@@ -110,6 +98,6 @@ extension AppDelegate {
         viewControllers.append(navigationController)
         tabController.viewControllers = viewControllers
     }
-
+    
 }
 
